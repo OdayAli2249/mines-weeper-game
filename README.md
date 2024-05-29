@@ -1,5 +1,6 @@
 # Mines Weeper Game
 This is an enhanced version of the classic Minesweeper game implemented in Java using Multithreaded and Object-Oriented Programming (OOP) principles.
+new rules get added to the game like supporting multiplayer (human vs human, human vs computer), save and load game, display saved game, score record, shield concepts (something like health) and more.
 
 ### Note
 Please be aware that this codebase is one of my earliest projects, developed in early 2017 when I was just starting my career. As such, it may not reflect my current coding standards or best practices. While it serves as a testament to my learning journey, I recommend reviewing the code with this context in mind.
