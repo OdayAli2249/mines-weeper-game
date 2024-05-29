@@ -4,11 +4,6 @@ This is an enhanced version of the classic Minesweeper game implemented in Java 
 ### Note
 Please be aware that this codebase is one of my earliest projects, developed in early 2017 when I was just starting my career. As such, it may not reflect my current coding standards or best practices. While it serves as a testament to my learning journey, I recommend reviewing the code with this context in mind.
 
-## Game Description
-
-Minesweeper is a single-player puzzle game. The game is played on a grid of cells, each of which may contain a hidden mine. The objective is to clear the grid without detonating any mines. The player uncovers cells to reveal numbers that indicate how many mines are adjacent to that cell. Using these numbers, players can deduce the locations of mines and avoid them.
-
-
 ## Features
 - **Multithreading Programming for UI and Computation Separation**: Carefully managed interactions between threads to ensure smooth gameplay and user experience.
 - **Object-Oriented Programming (OOP)**: Employed Object-Oriented Programming principles to design a modular and scalable codebase.
