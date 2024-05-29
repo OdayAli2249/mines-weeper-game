@@ -25,7 +25,6 @@ public abstract class ArrayGenerator {
     }
 
     public abstract void GenerateANewField();
-//public abstract void  generateShield();
 
     public int[][] getField() {
         return Field;

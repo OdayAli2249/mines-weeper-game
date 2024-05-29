@@ -142,9 +142,8 @@ public class GUIio extends UserInterfaceIO implements ActionListener, MouseMotio
                 timer.ApdateLastTime();
                 
                 if (CurrentUserInterface == gamedisplayer) {
-                    // timer.Reset();// تالتا هون قلنالو ازا ما كنت عواجهة اللعبة وكنت عواجهة العرض عميل الابديت تبع واجة العرض
                     CurrentUserInterface.Apdate(CM);
-                }                                               // رابعا بنفس هاد الكلاس عند الريندر
+                }                                              
 
             }
             
@@ -227,7 +226,6 @@ public class GUIio extends UserInterfaceIO implements ActionListener, MouseMotio
             g.drawString("Time Passed : " + ((timer.getTimeLimit() - timer.getTimePassed()) / 1000), 670, 400);
             
             g.drawString("Turn : \nPlayer " + (CM.getCurrentPlayer().getPlayerID() + 1), 50, 620);
-            //   g.drawString("Shield : " + (CM.getCurrentPlayer().getNumberofshield()), 60, 635);
             if (CM.getCurrentPlayer().getNumberofshield() != 0) {
                 for (int i = 0; i < CM.getCurrentPlayer().getNumberofshield(); i++) {
                     g.drawImage(Assets.Shield, 140 + (i * 25), 606, 20, 20, null);
@@ -253,8 +251,7 @@ public class GUIio extends UserInterfaceIO implements ActionListener, MouseMotio
             
         } else {
             
-            CurrentUserInterface.Render(g, CM);                  // هون نحنا من الأساس عم نستدعي تابع الريندر تبع الواجهة الحالية ازا ما كانت الواجهة الحالية هي واجهة اللعبة
-        }                                                        // خامسا بكلاس عارض اللعبة
+            CurrentUserInterface.Render(g, CM);
     }
     
     @Override
@@ -298,7 +295,6 @@ public class GUIio extends UserInterfaceIO implements ActionListener, MouseMotio
     
     @Override
     public void DisplayOutput(CellsManager cellsmanager) {
-        //CM = cellsmanager;                  التعليمة  اللي فرشت البرنامج                   
 
         bs = Display.getCanvas().getBufferStrategy();
         if (bs == null) {
@@ -438,62 +434,16 @@ public class GUIio extends UserInterfaceIO implements ActionListener, MouseMotio
                  }
                 }
                 try {
-                    // CM.getCurrentPlayer().PlayerThread.join(500);
-                    /*
-                    if (CM.getCurrentPlayer().getPlayerType() == 'H') {
-                    
-                    if (e.getButton() == MouseEvent.BUTTON3) {
-                    
-                    int x = e.getX() / IMAGEWIDTH;
-                    int y = e.getY() / IMAGEHIEGHT;
-                    
-                    try {
-                    
-                    CM.getCell(x, y).CellExpected(CM, x, y);
-                    } catch (Exception a) {
-                    }
-                    
-                    } else if (e.getButton() == MouseEvent.BUTTON1) {
-                    int x = e.getX() / IMAGEWIDTH;
-                    int y = e.getY() / IMAGEHIEGHT;
-                    try {
-                    if (!CM.getCell(x, y).getVisible()) {
-                    System.out.println("Current Player Id before Pressing " + CM.getCurrentPlayer().getPlayerID());
-                    
-                    if (GameStarted != true) {
-                    System.out.println("I am inside GameStart Condition ");
-                    if (CM.getCell(x, y).getType() == 'M' && AllCellsInvisibleAndNotExpected()) {
-                    StrategyA(x, y);
-                    }
-                    }
-                    CM.getCell(x, y).CellPressed(CM, x, y);
-                    
-                    }
-                    } catch (Exception a) {
-                    setCurrentUserInterface(mainui);         ///////////////////////////////////////
-                    }
-                    CM.Test2();
-                    System.out.println();
-                    CM.Test();
-                    }
-                    
-                    }*/
+
                 } catch (Exception ex) {
                 }
             } else if (CurrentUserInterface == gamedisplayer) {
                 if (GameDisplayer.Counter == GameDisplayer.Press.size()) {
-                    // CM.PrepareResultArray();
-                    //  ShowResult();
                     GameDisplayer.Counter = 0;
-                    //   MainUI.State1 = false;    
-                    //   GUIio.setGameStarted(false);
-                    //  IO.CM.setGameState(true);
-                    setCurrentUserInterface(loadgameanddisplay);
-                    
+                    setCurrentUserInterface(loadgameanddisplay);           
                     setCurrentUserInterface(mainui);
                     CanLoad1 = true;
 
-                    // newCM = true;
                 }
             } else {
                 CurrentUserInterface.HandlingInput();

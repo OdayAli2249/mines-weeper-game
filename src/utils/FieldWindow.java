@@ -1,6 +1,3 @@
-/* هاد كلاس بيعمل النافذة اللي بدنا ياها بتابع الكرييت      */
-/*  استدعي هاد التابع بالمكان اللي بتشوفي مناسب */
-/* بناخد المعومات من المتحولات اللي عرفتا تحت بس تروح النافذة*/
 package utils;
 
 import java.awt.Dimension;
@@ -18,7 +15,6 @@ import javax.swing.JTextField;
  * @author Emperor
  */
 public class FieldWindow {
-/* متحولات الها علاقة بعناصر النافذة فقط */
     public static ImageIcon MyImage;
     public String Name;
     public static JFrame frame = null;
@@ -39,9 +35,6 @@ public class FieldWindow {
     public static JLabel label6 = null;
     public static JButton button = null;
     public static JButton button1 = null;
-    
-    /* متحولات الها علاقة بداتا اللي بدنا نجيبها من المستخدم */
-
     public static String StartGameDate;
     public static String EndGameDate;
     public static String FirstPlayerName;
@@ -50,8 +43,8 @@ public class FieldWindow {
     public static Integer SaveOrder=1;
     public static boolean SaveOrNotForDisplay;
     
-    public static boolean WindowAlive = true; // هاد متحول بدلنا ازا النافذة شغالة او لا
- /* تابع انشاء النافذة */
+    public static boolean WindowAlive = true; 
+
     public static void CreateWindow() {
 
         frame = new JFrame();
@@ -116,17 +109,15 @@ public class FieldWindow {
             @Override
             public void actionPerformed(ActionEvent e) {
                 
-                /* هون بنحدد شوبيصير لما بنضغط عزر ال نو يعني بناخد البيانات من الحقول وبنحطا بمتحولا مشان بس تروح النافذة ناخد المعلومات من هي المتحولات */
-                
                 StartGameDate = field.getText();
                 EndGameDate = field1.getText();
                 FirstPlayerName = field2.getText();
                 SecondPlayerNamel = field3.getText();
-                SaveFile = "Rano.ser"; // هون بما انو اختا انو ما يحفظ معناها ما لازم ناخد اللي دخلو بالحقل
-                SaveOrder = -1; // هون حولنا السترينغ لعدد انتيجر
+                SaveFile = "Rano.ser"; 
+                SaveOrder = -1; 
                 SaveOrNotForDisplay = false;
-                WindowAlive = false; // حطينا هاد المتحول هيك لانو التعليمة اللي بعدا بنحذف النافذة وهيك بنعرف انو النافذة راحت مشان نوقف الحلقة تبع السليب متل ما عملنا قبل
-                frame.dispose();     // ولازم نرجعو ترو بعد ما تنتهي الحلقة مشان بس نشغل النافذة مرة تانية متل ما عملنا بالسيف
+                WindowAlive = false; 
+                frame.dispose();     
                 PrintData();
             }
 
@@ -153,10 +144,6 @@ public class FieldWindow {
 
         });
 
-        //panel.add(label);
-        //panel.add(field);
-        //panel.add(label1);
-        //panel.add(field1);
         panel.add(label2);
         panel.add(field2);
         panel.add(label3);
@@ -173,7 +160,7 @@ public class FieldWindow {
 
         System.out.println("End");
 
-    }  /* نهاية تابع انشاء النافذة */
+    }  
     
     public static void PrintData(){
     
@@ -186,5 +173,5 @@ public class FieldWindow {
         System.out.println(SaveOrNotForDisplay);
     
     }
-   // ملاحظة لازم نعمل بعد استدعاء تابع الكرييت حلقة قيها سليب تضل شغالة لحتى نتاكد انو راحت النافذة متل ما عملنا سابقا
+
 }

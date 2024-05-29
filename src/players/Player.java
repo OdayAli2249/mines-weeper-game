@@ -101,7 +101,6 @@ public abstract class Player implements Serializable {
 
             }
 
-            // Board.getPlayers().remove(Board.getCurrentPlayerIndex());
             if (IO.CM.getPlayers().size() > 1) {
                 System.out.println(IO.CM.getCurrentPlayer().getPlayerID() + " Removed");
 
@@ -111,7 +110,6 @@ public abstract class Player implements Serializable {
             } else {
 
                 IO.CM.setGameState(true);
-                //Board.getPlayers().clear();
 
             }
 
@@ -218,134 +216,6 @@ public abstract class Player implements Serializable {
     }
 
     public abstract void ReleaseThread();
-
- /*   public void SavePlayer() throws IOException, ClassNotFoundException {
-        File f = new File("t.txt");
-        ObjectOutputStream printwriter = new ObjectOutputStream(new FileOutputStream((f)));
-        for (Player P : IO.CM.getPlayers()) {
-            printwriter.writeInt(P.getPlayerID());
-            printwriter.writeInt(P.getScore());
-        }
-        printwriter.writeChars("Ramy");
-
-
-        //   File2 file = new File2();
-        /*   printwriter.print(BoardWidth);
-        printwriter.println();
-        printwriter.print(BoardHieght);
-        printwriter.println();
-
-        for (BCell d : Board) {
-            if (d.getType() == 'M') {
-                char c = d.getType();
-                printwriter.write(c);
-                printwriter.write("(");
-                printwriter.print(d.getXCoordinate());
-                printwriter.write(",");
-                printwriter.print(d.getYcoordinate());
-                printwriter.write(")");
-                printwriter.write(" ");
-
-                if (d.getVisible() == true) {
-                    printwriter.write("V");
-
-                }
-                printwriter.write(" ");
-
-                if (d.getExpected() == true) {
-                    printwriter.write("E");
-
-                }
-
-                printwriter.println();
-
-            } //  printwriter.write("\n");
-            else if (d.getIsSheild() == true) {
-                printwriter.print('t');
-                printwriter.write("(");
-                printwriter.print(d.getXCoordinate());
-                printwriter.write(",");
-                printwriter.print(d.getYcoordinate());
-                printwriter.write(")");
-
-                if (d.getVisible() == true) {
-                    printwriter.write("V");
-
-                }
-                printwriter.write(" ");
-
-                if (d.getExpected() == true) {
-                    printwriter.write("E");
-
-                }
-                printwriter.println();
-
-            } else if (d.getIsSheild() == false && d.getType() != 'M') {
-
-                if (d.getVisible() == true) {
-
-                    printwriter.write("(");
-                    printwriter.print(d.getXCoordinate());
-                    printwriter.write(",");
-                    printwriter.print(d.getYcoordinate());
-                    printwriter.write(")");
-                    printwriter.println();
-
-                    printwriter.write("V");
-
-                }
-
-                if (d.getExpected() == true) {
-
-                    printwriter.write("(");
-                    printwriter.print(d.getXCoordinate());
-                    printwriter.write(",");
-                    printwriter.print(d.getYcoordinate());
-                    printwriter.write(")");
-                    printwriter.write("E");
-                    printwriter.println();
-
-                }
-
-            }
-
-        }
-       
-        //  File2 s = new File2();
-        //   s.readFromFile();
-
-      
-          printwriter.close();
-
-           ArrayList<Player> CM2;
-        File Reader2 = new File("t.txt");
-        ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream((f)));
-        CM2 = (ArrayList<Player>) inputStream.readObject();
-        for (Player a : CM2) {
-            System.out.print("Id" + a.getPlayerID());
-            System.out.println("Score" + a.getScore());
-
-         
-        File r = new File("t.txt");
-        ObjectInputStream printwriter2 = null;
-        
-        printwriter2 = new ObjectInputStream(new FileInputStream(f));
-        int Id;
-        int Score;
-
-        {
-            Id = printwriter2.readInt();
-            System.out.print("Id=" + Id);
-            Score = printwriter2.readInt();
-            System.out.println(" Score " + Score);
-            Id = printwriter2.readInt();
-            System.out.print("Id2=" + Id);
-            Score = printwriter2.readInt();
-            System.out.println(" Score2 " + Score);
-                System.out.print(printwriter2.readChar());//
-
-            }
-
-        }*/
-    }
+ 
+}
 

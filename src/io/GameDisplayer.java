@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.damascusuniversity.io;
 
 import SaveAndLoad.Save;
@@ -53,7 +48,7 @@ public class GameDisplayer extends UserInterfaceIO {
     }
     
     @Override
-    public void Render(Graphics g, CellsManager c) {  // سادسا هون نسخنا تابع الريندر مشان يعرض اللعبة عواجهة العارض
+    public void Render(Graphics g, CellsManager c) {   
         if (FirstClick == 1) {
             s.ReleaseLoadDisplayThread(NameFile);
             try {
@@ -137,7 +132,6 @@ public class GameDisplayer extends UserInterfaceIO {
         
         g.drawString("Time Passed : " + ((timer.getTimeLimit() - timer.getTimePassed()) / 1000), 670, 400);
         g.drawString("Turn : \nPlayer " + (IO.CM.getCurrentPlayer().getPlayerID() + 1), 50, 620);
-        //   g.drawString("Shield : " + (CM.getCurrentPlayer().getNumberofshield()), 60, 635);
         if (IO.CM.getCurrentPlayer().getNumberofshield() != 0) {
             for (int i = 0; i < IO.CM.getCurrentPlayer().getNumberofshield(); i++) {
                 g.drawImage(Assets.Shield, 140 + (i * 25), 606, 20, 20, null);
@@ -150,15 +144,10 @@ public class GameDisplayer extends UserInterfaceIO {
     }
     
     @Override
-    public void HandlingInput() {
-        
-    }
+    public void HandlingInput() {}
     
     @Override
-    public void DisplayOutput(CellsManager cellsmanager) {
-
-        
-    }
+    public void DisplayOutput(CellsManager cellsmanager) {}
     
     @Override
     public void Apdate(CellsManager cellsmanager) {
@@ -175,14 +164,12 @@ public class GameDisplayer extends UserInterfaceIO {
             
         }
 
-        // خامسا هون بدنا ناخد من الملف ونعمل اجرائية الضغط او التوقع مع مراعاة بعض الشروط
         if (Counter < Press.size()) {
 
-            // رابعا بنفس هاد الكلاس عند الريندر
             BCell c;
             c = Press.get(Counter);
             
-            if (Point.get(Counter) == 'E') {// لان وقت عم نحفظ البورد كلها عم تنحفظ مفتوحه لما عم حول كل الخلايا ل مو مفتوحه عم تروح هي تببع توقعArraylistبتحوي اذا الخليه متوقعه او مرئيه
+            if (Point.get(Counter) == 'E') {
 
                 if (c.getPlayerWhoPressCell() == IO.CM.getCurrentPlayer().getPlayerID() && (c.getTime() == (timer.getTimeLimit() - timer.getTimePassed()) / 1000)) {
                     

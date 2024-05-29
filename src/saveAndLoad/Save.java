@@ -141,10 +141,8 @@ public class Save {
 
         printwriter.writeInt(IO.CM.getBoardHieght());
         printwriter.writeInt(IO.CM.getBoardWidth());
-        printwriter.writeInt(LargSizeArrayGenerator.FIELDHIEGHT
-        );
-        printwriter.writeInt(LargSizeArrayGenerator.FIELDWIDTH
-        );
+        printwriter.writeInt(LargSizeArrayGenerator.FIELDHIEGHT);
+        printwriter.writeInt(LargSizeArrayGenerator.FIELDWIDTH);
         printwriter.writeObject(IO.CM.getPlayers());
         printwriter.writeObject(IO.CM.getLosedPlayers());
         printwriter.writeObject(IO.CM.getLosedPlayerID());
@@ -153,7 +151,6 @@ public class Save {
         printwriter.writeInt(CellsManager.getHumanPlayersNumber());
         printwriter.writeInt(CellsManager.getTypeOfPlayersWhoCannotHaveShield());
         printwriter.writeInt(CellsManager.getShieldscore());
-        //         printwriter.writeInt(IO.CM.getTypeOfPlayersWhoCannotHaveShield());
         printwriter.writeInt(Player.getEmptyCellPresses());
         printwriter.writeInt(Player.getNumericCellPresses());
         printwriter.writeInt(Player.getMineicCellPresses());
@@ -241,10 +238,6 @@ public class Save {
 
         System.out.println("numberofAutomaticPlayer" + numberofAutomaticPlayer + "numberofHumanPlayer" + numberofHumanPlayer);
         System.out.println("BoardH" + BoardH + "BoardW" + BoardW);
-
-        // int TypeOfPlayersWhoCannotHaveShield;
-        //  TypeOfPlayersWhoCannotHaveShield=printwriter2.readInt();
-        //  System.out.println("TYYYYYYYYYYYYYY"+TypeOfPlayersWhoCannotHaveShield);
         System.out.println(" FieldH;" + FieldH + " FieldW;" + FieldW);
         System.out.println(" ShieldScore;" + ShieldScore + " PlayerWhoCannotHaveAshield;" + PlayerWhoCannotHaveAshield);
 
@@ -379,10 +372,6 @@ public class Save {
 
         }
 
-        /* for (Player P : SavePlayer) {
-            System.out.println("Id" + P.getPlayerID() + "Score" + P.getScore() + "Type" + P.getPlayerType());
-
-        }*/
         System.out.println("numberofAutomaticPlayer" + numberofAutomaticPlayer + "numberofHumanPlayer" + numberofHumanPlayer);
 
         IO.CM.setdisplayCellsmanager(BoardSave, SavePlayer, pressCell, numberofAutomaticPlayer, numberofHumanPlayer, BoardH, BoardW, FieldH, FieldW, ShieldScore, PlayerWhoCannotHaveAshield,
@@ -399,10 +388,8 @@ public class Save {
     }
 
     public int ReadLastGameID() throws FileNotFoundException, IOException {
-        //   File f = new File();
         int Id;
         DataInputStream Reader = new DataInputStream(new BufferedInputStream(new FileInputStream("LastGemeId.txt")));
-        // Id = Reader.readInt();
         FileInputStream fi = new FileInputStream("abd");
         ObjectInputStream is = new ObjectInputStream(fi);
         Id = is.readInt();

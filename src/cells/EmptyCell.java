@@ -1,5 +1,4 @@
 package com.itedemescusuniversity.cells;
-
 import com.damascusuniversity.io.GUIio;
 import com.itedemescusuniversity.cells.cellsmangmentsystem.CellsManager;
 import java.util.ArrayList;
@@ -32,7 +31,7 @@ public class EmptyCell extends BCell {
 
         for (Point p : P) {
 
-            BCell C = Board.getCell(p.getX(), p.getY());  //احداثيات النقط المحيطه
+            BCell C = Board.getCell(p.getX(), p.getY());
 
             if (C.getVisible() == true) {
                 continue;
@@ -80,9 +79,7 @@ public class EmptyCell extends BCell {
                         CellsManager.PointDisplayer.add('V');
 
             if (Board.getCell(x, y).getIsSheild() == true && Board.searchTypeOfPlayersWhoCannotHaveShield(Board.getCurrentPlayer().getPlayerType()) == false) {
-
                 Board.getCurrentPlayer().IncreaseShield(1);
-                // System.out.println("Sheild:" + Board.getCurrentPlayer().getNumberofshield());
             }
             Recursion(Board, x, y);
             System.out.println(Board.getCurrentPlayer().getPlayerType() + " (" + x + "," + y + ").");

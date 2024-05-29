@@ -262,7 +262,6 @@ public class OptionUI extends UserInterfaceIO implements ActionListener {
     private void InitializeIncreaseRect() {
         IncreaseButtons[0] = new Rectangle(570, 70, 20, 20);
         IncreaseButtons[1] = new Rectangle(570, 115, 20, 20);
-        // IncreaseButtons[2] = new Rectangle(570, 170, 20, 20);
         IncreaseButtons[2] = new Rectangle(570, 220, 20, 20);
         IncreaseButtons[3] = new Rectangle(570, 260, 20, 20);
         IncreaseButtons[4] = new Rectangle(570, 303, 20, 20);
@@ -278,7 +277,6 @@ public class OptionUI extends UserInterfaceIO implements ActionListener {
     private void InitializeDereaseRect() {
         DecreaseButtons[0] = new Rectangle(470, 70, 20, 20);
         DecreaseButtons[1] = new Rectangle(470, 115, 20, 20);
-        //DecreaseButtons[2] = new Rectangle(470, 170, 20, 20);
         DecreaseButtons[2] = new Rectangle(470, 220, 20, 20);
         DecreaseButtons[3] = new Rectangle(470, 260, 20, 20);
         DecreaseButtons[4] = new Rectangle(470, 303, 20, 20);
@@ -293,7 +291,6 @@ public class OptionUI extends UserInterfaceIO implements ActionListener {
     private void InitializeValues() {
         Values[0] = 1;
         Values[1] = 1;
-        //   Values[2] = 0;
         Values[2] = 10;
         Values[3] = 10;
         Values[4] = 30;
@@ -308,7 +305,7 @@ public class OptionUI extends UserInterfaceIO implements ActionListener {
     private void InitializeDistance() {
         Distance[0] = 78;
         Distance[1] = 123;
-        //     Distance[2] = 178;
+
         Distance[2] = 228;
         Distance[3] = 268;
         Distance[4] = 310;

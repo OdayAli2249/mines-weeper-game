@@ -64,13 +64,10 @@ public class Concoleio extends IO {
             if (cellsmanager.getCurrentPlayer().getPlayerType() == 'H' && cellsmanager.getCurrentPlayer().getPlayerState() == true) {
                 do {
                     System.out.println("Please enter the Cell you want To press x , y ,expect");
-                    // DisplayOutput(cellsmanager);
-                    //Scanner SC = new Scanner(System.in);
 
                     x = SC.nextInt();
                     y = SC.nextInt();
                     expect = SC.nextInt();
-                    //       Point choice = new Point(x, y);
 
                 } while ((x < 0 || y < 0) || (x > cellsmanager.getBoardWidth()) || (y > cellsmanager.getBoardHieght()) || (expect != 0 && expect != 1));
 
@@ -87,10 +84,8 @@ public class Concoleio extends IO {
                 try {
                     Thread.sleep(1000);
 
-                    //System.out.println(CM.getCurrentPlayer().getPlayerType());
                     RN = new Random();
                     Point p = cellsmanager.getCurrentPlayer().getInput(cellsmanager);
-                    //  int EX = CM.getCurrentPlayer().g
                     int R = RN.nextInt(3);
                     if (R == 0 || R == 1) {
                         if (!cellsmanager.getCell(p.getX(), p.getY()).getVisible()) {
@@ -108,7 +103,6 @@ public class Concoleio extends IO {
                         cellsmanager.getCell(p.getX(), p.getY()).CellExpected(cellsmanager, p.getX(), p.getY());
                     }
 
-                    // CM.Test();
                 } catch (InterruptedException ex) {
                     Logger.getLogger(GUIio.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -121,7 +115,6 @@ public class Concoleio extends IO {
             System.out.println("......You Won......");
 
             for (Player p : cellsmanager.getPlayers()) {
-                //   p.IncreaseScore(100 * cellsmanager.getnumberofMineNonExpected());
                 System.out.println(" Id: " + p.getPlayerID() + "  Score   " + p.getScore());
 
             }

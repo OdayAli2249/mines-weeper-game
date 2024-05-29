@@ -11,7 +11,6 @@ public class ImageLoader {
     
         return new ImageIcon(path).getImage();
     
-    }
-    
+    } 
     
 }

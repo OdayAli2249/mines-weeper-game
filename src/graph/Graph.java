@@ -1,5 +1,4 @@
 package graph;
-
 import com.itedamascusuniversity.generator.LargSizeArrayGenerator;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -100,13 +99,10 @@ public class Graph implements Serializable {
     }
 
     public void AnotherTemporaryMeth() {
-
-        //InitializeGraph();
         for (Cell c : CellsGraph) {
             System.out.print("(" + c.getX() + "," + c.getY() + ")");
             System.out.print(c.getNumberOfPumpSurrounded());
         }
-
     }
 
     public void InitializeGraph() {
@@ -131,10 +127,8 @@ public class Graph implements Serializable {
     }
 
     public void GenerateGraph() {
-
         Build(generator.getField(), generator.getFieldWidth(), generator.getFieldHieght());
         InitializeGraph();
-
     }
 
     public LargSizeArrayGenerator getTheGenertor() {

@@ -1,5 +1,4 @@
 package com.itedemescusuniversity.cells;
-
 import com.damascusuniversity.io.GUIio;
 import com.itedemescusuniversity.cells.cellsmangmentsystem.CellsManager;
 import players.Player;
@@ -38,41 +37,12 @@ public class NumericCell extends BCell {
             CellsManager.pressCell.add(Board.getCell(x, y));
             CellsManager.PointDisplayer.add('V');
             Board.getCurrentPlayer().IncreaseScore(ScoreAdded);
-
             System.out.println(Board.getCurrentPlayer().getPlayerType() + " (" + x + "," + y + ").");
             System.out.println("player id " + Board.getCurrentPlayer().getPlayerID());
             System.out.println("Score " + Board.getCurrentPlayer().getScore());
             Board.IsGameEnded();
             Board.NextPlayer();
             GUIio.getTimer().Reset();
-
-            /*
-            boolean Ok = false;
-
-            for (BCell c : Board.getBoard()) {
-                if (c.getType() == 'N' && c.getVisible() == false) {
-                    if (!c.getExpected()) {
-                        Ok = true;
-                    }
-                }
-
-                if (c.getType() == 'E' && c.getVisible() == false) {
-                    if (!c.getExpected()) {
-                        Ok = true;
-                    }
-                }
-            }
-
-            if (Ok == false) {
-                for (BCell c : Board.getBoard()) {
-                    if (!c.getExpected() && c.getType() == 'M') {
-                        Board.getCurrentPlayer().IncreaseScore(100);
-                    }
-                }
-
-                Board.setGameState(true);
-            }
-             */
         }
 
     }
@@ -101,8 +71,6 @@ public class NumericCell extends BCell {
             Board.IsGameEnded();
             Board.NextPlayer();
             GUIio.getTimer().Reset();
-
         }
     }
-
 }

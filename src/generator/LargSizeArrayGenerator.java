@@ -121,7 +121,7 @@ public void GenerateANewField2() throws FileNotFoundException, IOException {
                     int nunmberofline = 1;
                     int ff;
                         while ((currentLine = reader.readLine()) != null) {
-                            //  System.out.println(currentLine);
+
                             if (nunmberofline == 1) {
                                 FIELDWIDTH = (currentLine.charAt(0) * 10) + currentLine.charAt(1);
 
@@ -137,7 +137,6 @@ public void GenerateANewField2() throws FileNotFoundException, IOException {
                                 int x, y, c, NumberOfpump;
                                 while (i < currentLine.length()) {
 
-                                    //  System.out.println(currentLine.charAt(i));
                                     if (currentLine.charAt(i) == 'M') {
                                         i += 2;
                                         x = currentLine.charAt(i);
@@ -171,7 +170,6 @@ public void GenerateANewField2() throws FileNotFoundException, IOException {
                                         }
                                         i = currentLine.length();
 
-                                        // Board.add(new MineCell(x, y, false));
                                     } else if (currentLine.charAt(i) == 't') {
 
                                         i += 2;

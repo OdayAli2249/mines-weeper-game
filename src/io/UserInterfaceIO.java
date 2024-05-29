@@ -12,8 +12,8 @@ public abstract class UserInterfaceIO extends IO {
 
     public static ScreenDisplayer Display;
     public static MainUI mainui = new MainUI(); 
-    public static GameDisplayer gamedisplayer;             // أولا عملنا المتحول هون
-public static LoadGameAndDisplay loadgameanddisplay;
+    public static GameDisplayer gamedisplayer;             
+    public static LoadGameAndDisplay loadgameanddisplay;
     public static OptionUI optionui = new OptionUI();
     public static MoreOption moreoption2 = new MoreOption();
     public static LoadGame loadgame;
@@ -28,10 +28,7 @@ public static LoadGameAndDisplay loadgameanddisplay;
         mainui = new MainUI();
         loadgame = new LoadGame();
         gamedisplayer = new GameDisplayer();  
-loadgameanddisplay=new  LoadGameAndDisplay();
-// تانيا عملنا الاوبجكت هون وتالتا بالجي يو آي
-        //mainui.setMeToBasicFrame();
-        
+        loadgameanddisplay=new  LoadGameAndDisplay();
         scoreboard=new ScoreBoard();
        
     }

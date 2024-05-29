@@ -1,10 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.damascusuniversity.io;
-
 import SaveAndLoad.Save;
 import static com.damascusuniversity.io.UserInterfaceIO.CurrentUserInterface;
 import static com.damascusuniversity.io.UserInterfaceIO.Display;
@@ -162,8 +156,6 @@ public class LoadGame extends UserInterfaceIO {
     public void setMeToBasicFrame() {
         try {
             Filename = new String[10];
-
-            //  String[] NameOfFile = new String[5];
             File f = new File("text.txt");
             BufferedReader Reader = new BufferedReader(new FileReader(f));
             Filename[0] = Reader.readLine();
@@ -208,8 +200,7 @@ public class LoadGame extends UserInterfaceIO {
 
         if (new Rectangle(x, y, 1, 1).intersects(QuikSave)) {
             if (MainUI.State1 != false) {
-                                Filename2[0]="QuikSave";
-
+                Filename2[0]="QuikSave";
                 s.setFileName("QuikSave");
                 s.ReleaseSaveThread();
 
@@ -226,8 +217,6 @@ public class LoadGame extends UserInterfaceIO {
                 GUIio.getTimer().Reset();
                 MainUI.State1 = true;
                 MainUI.CanLoad1 = false;
-                // MainUI.CanstartnewGame=false;
-
                 CurrentUserInterface = null;
 
             }
@@ -272,19 +261,15 @@ public class LoadGame extends UserInterfaceIO {
                         }
                         GUIio.ApdateCellsDimension();
                         IO.CM.setGameState(false);
-
                         GUIio.getTimer().Reset();
                         MainUI.State1 = true;
                         MainUI.CanLoad1 = false;
-                        // MainUI.CanstartnewGame=false;
-
                         CurrentUserInterface = null;
 
                     }
                 }
             }
         }
-        //  setCurrentUserInterface(o);
         if (new Rectangle(x, y, 1, 1).intersects(B)) {
             for (int i = 0; i < Filename.length; i++) {
                 if (Filename[i] == null) {
@@ -495,7 +480,6 @@ public class LoadGame extends UserInterfaceIO {
 
         panel = new JPanel();
         field = new JTextField(50);
-        //field.setVisible(true);
         button = new JButton();
         button.setText("OK");
         button.addActionListener(new ActionListener() {
@@ -514,7 +498,6 @@ public class LoadGame extends UserInterfaceIO {
 
         panel.add(field);
         panel.add(button);
-        //frame.add(button);
         frame.add(panel);
 
     }

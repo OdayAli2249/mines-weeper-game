@@ -16,7 +16,6 @@ public class ScreenDisplayer {
 
         InitializeFrame();
         InitializeCanvas();
-       // LinkCanvasWithFrane();
 
     }
 

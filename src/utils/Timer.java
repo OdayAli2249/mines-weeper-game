@@ -1,7 +1,5 @@
 package utils;
-
 import java.io.Serializable;
-
 
 
 public class Timer  implements Serializable{
@@ -25,32 +23,6 @@ public class Timer  implements Serializable{
 
     }
 
-    /*
-    public void RunTimer(CellsManager cellsmanager){
-    
-     Thread thread = new Thread(this);
-     thread.start();
-    
-    }
-    
-    @Override
-    public void run() {
-       
-        StartTime = System.currentTimeMillis();
-        LastTime = StartTime;
-        
-        while(GUIio.getRunning()){
-            
-            Now = System.currentTimeMillis();
-            TimePassed += (Now - LastTime);
-            LastTime = Now;
-            
-        
-        }
-
-       
-    }
-     */
     public void ApdateTimer() {
 
         Now = System.currentTimeMillis();
@@ -75,7 +47,6 @@ public class Timer  implements Serializable{
         return TimePassed;
     }
    
-
     public void Reset() {
         TimePassed = 0;
     }

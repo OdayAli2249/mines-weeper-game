@@ -32,12 +32,9 @@ public class GameInfo implements Serializable {
     public static ArrayList<String> FilesName;
     public String FileNAmeDisplayer;
     public int[] PlayerID;
-
-    // متحولات اضافية للتاريخ
     public String StartGameDate;
     public String EndGameDate;
 
-    // اضافة المتحولات ضمن بارامترات الباني بالقيم
     public GameInfo(int GameID, int[] GameScore, int[] PlayerID, String[] PlayersName, String FileDisplayer, String StartGameDate, String EndGameDate) {
 
         this.GameID = GameID;
@@ -47,11 +44,6 @@ public class GameInfo implements Serializable {
         this.FilesName = new ArrayList<String>();
         this.FileNAmeDisplayer = FileDisplayer;
         this.PlayerID = PlayerID;
-
-        /*  ضفت هدول المتحولين بعبرو عن تاريخ بدء وانتهاء لعبة معينة هي متحولين سترينغ */
- /* ينكتبو بالشكل */
- /* number/number/number */
- /* حصرا والا بصير خطأ */
         this.StartGameDate = StartGameDate;
         this.EndGameDate = EndGameDate;
 
@@ -175,7 +167,6 @@ public class GameInfo implements Serializable {
 
     }
 
-    /* ضفت تلت توابع كل واحد بياخد ليست وبرجعا مرتبة تبعا لمتحول معين */
     public static Comparator<GameInfo> PlayerNameComparator = new Comparator<GameInfo>() {
 
         public int compare(GameInfo g1, GameInfo g2) {
@@ -187,8 +178,6 @@ public class GameInfo implements Serializable {
         }
     };
 
-    /* بياخد ليست معلومات الالعاب وبرجعا مرتبة تبعا لمتحول اسماء اللاعبين */
- /* بيرتب الليست على حسب التسلسل الابجدي لاسم اللاعب الاول من كل لعبة */
     public static ArrayList<GameInfo> CreateNamesSorting(ArrayList<GameInfo> list) {
         Collections.sort(list, GameInfo.PlayerNameComparator);
         return list;
@@ -229,9 +218,6 @@ public class GameInfo implements Serializable {
         }
     };
 
-    /* تابع بياخد ليست وبرجعا مرتبة تبعا لتاريخ بدء اللعبة  */
- /* لازم يكون متحول السترينغ اللي بعبر عن التاريخ مكتوب بالشكل حصرا */
- /* number / number / number */
     public static ArrayList<GameInfo> CreateDatesSorting(ArrayList<GameInfo> list) {
         Collections.sort(list, GameInfo.GameDateComparator);
         return list;
@@ -271,13 +257,11 @@ public class GameInfo implements Serializable {
         }
     };
 
-    /* نفس التابع السابق بس انو برجع الليست اللي بنعطيها للتابع مرتبة تبعا لتاريخ نهاية اللعبة */
     public static ArrayList<GameInfo> CreateEndDatesSorting(ArrayList<GameInfo> list) {
         Collections.sort(list, GameInfo.EndGameDateComparator);
         return list;
     }
 
-    /* gette .. */
     public String getStartGameDate() {
         return StartGameDate;
     }

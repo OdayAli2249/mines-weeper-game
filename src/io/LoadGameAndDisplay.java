@@ -245,7 +245,6 @@ public class LoadGameAndDisplay extends UserInterfaceIO {
 
         panel = new JPanel();
         field = new JTextField(50);
-        //field.setVisible(true);
         button = new JButton();
         button.setText("OK");
         button.addActionListener(new ActionListener() {
@@ -264,7 +263,6 @@ public class LoadGameAndDisplay extends UserInterfaceIO {
 
         panel.add(field);
         panel.add(button);
-        //frame.add(button);
         frame.add(panel);
 
     }
@@ -273,26 +271,7 @@ public class LoadGameAndDisplay extends UserInterfaceIO {
     public void HandlingInput() {
         for (int f = 0; f < LoadGame.size(); f++) {
             if (new Rectangle(x, y, 1, 1).intersects(LoadGame.get(f))) {
-                //  GUIio.setGameStarted(false);
-/*
-                if (MainUI.Cansavedisplay == true) {
 
-                    CreateFrame();
-                    while (FN == null) {
-                        try {
-                            Thread.sleep(1000);
-                        } catch (InterruptedException ex) {
-                            break;
-
-                        }
-                    }
-                    s.setFileName(FN);
-                    Filename[f] = s.getFileName();
-
-                    s.ReleaseSaveDisplayThread();
-                    FN = null;
-
-                } else */
                     if (MainUI.CanLoad1 == true) {
                         if (Filename[f].equals("Rano.ser") != true) {
                             GameDisplayer.NameFile = Filename[f];
@@ -303,13 +282,9 @@ public class LoadGameAndDisplay extends UserInterfaceIO {
 
                         }
                     }
-                }
-
-            
+                }       
         }
-                //  setCurrentUserInterface(o);
-            
-        
+
 
         if (new Rectangle(x, y, 1, 1).intersects(B)) {
             try {

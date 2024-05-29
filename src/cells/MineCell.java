@@ -1,5 +1,4 @@
 package com.itedemescusuniversity.cells;
-
 import com.damascusuniversity.io.GUIio;
 import com.itedemescusuniversity.cells.cellsmangmentsystem.CellsManager;
 import players.Player;
@@ -26,15 +25,6 @@ public class MineCell extends BCell {
     public void CellPressed(CellsManager Board, int x, int y) {
 
         if (!getExpected() && !getVisible()) {
-            //  Board.getPlayers()[0].DecreaseScore(250);
-
-            //   if (Board.getPlayers()[0].getScore() < 0) {
-            // ArrayList<BCell> B = Board.getBoard();
-            // for (BCell b : B) {
-            //     if (b.IsMine) {
-            //   b.setVisible(true);
-            //     }
-            // }
             setVisible(true);
 
             Board.getCell(x, y).setPlayerWhoPressCell(Board.getCurrentPlayer().getPlayerID());
@@ -54,8 +44,6 @@ public class MineCell extends BCell {
                 Board.getCurrentPlayer().DecreaseShield(1);
                 System.out.println("player id " + Board.getCurrentPlayer().getPlayerID());
                 System.out.println("Score " + Board.getCurrentPlayer().getScore());
-                //     System.out.println("Sheild:" + IO.CM.getCurrentPlayer().getNumberofshield());
-
             } else {
                 punchmint = Player.getTheShieldAndThePunishmentOfTheMine() + Player.getMineicCellPresses();
                 Board.getCurrentPlayer().DecreaseShield(1);

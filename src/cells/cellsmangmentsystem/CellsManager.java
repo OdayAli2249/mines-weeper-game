@@ -37,8 +37,8 @@ public class CellsManager implements Serializable {
     private ArrayList<Player> LosedPlayers;
     private Player[] PlayersOrder;
     private int PlayersOrederSize;
-    private static ArrayList<Player> SavePlayer;///////////
-    private static ArrayList<BCell> BoardSave;/////
+    private static ArrayList<Player> SavePlayer;
+    private static ArrayList<BCell> BoardSave;
     public static ArrayList<BCell> pressCell;
     public static ArrayList<BCell> pressDisplayer;
     public static ArrayList<Character> PointDisplayer;
@@ -143,63 +143,12 @@ public class CellsManager implements Serializable {
                     System.out.print("  -");
                 }
 
-                // MakeSure The LOCATION of i & j
             }
-            /*  if(IsEnd == true)
-            System.out.println("Game Finished");
-            else {
-            System.out.println("Game Continuese");
-            }*/
 
         }
 
-        /* if(IsEnd == true)
-            System.out.println("Game Finished");
-            else {
-            System.out.println("Game Continuese");
-            }*/
         for (Player p : P) {
             System.out.println(p.getPlayerID());
-        }
-
-        /*
-        for (int i = 0; i < BoardHieght; i++) {
-            for (int j = 0; j < BoardWidth; j++) {
-                if (getCell(j, i).getVisible() == true) {
-                    System.out.print("V ");
-                } else {
-                    System.out.print("I ");
-                }
-
-            }
-
-            System.out.println("");
-
-        }
-         */
-        // System.out.println("Score :" + P[0].getScore());
-    }
-
-    public void Test2() {
-
-        for (int i = 0; i < BoardHieght; i++) {
-            System.out.println();
-            for (int j = 0; j < BoardWidth; j++) {
-
-                if (getCell(j, i).getType() == 'M') {
-                    System.out.print("  *");
-                } else if (getCell(j, i).getType() == 'N' && getCell(j, i).getIsSheild() == false) {
-                    System.out.print("  " + getCell(j, i).getNumberOfMineSurrounded());
-                } else if (getCell(j, i).getIsSheild() == false && getCell(j, i).getType() == 'E') {
-                    System.out.print("  -");
-                } else {
-                    System.out.print("  S");
-
-                }
-                // MakeSure The LOCATION of i & j
-
-            }
-
         }
 
     }
@@ -256,7 +205,7 @@ public class CellsManager implements Serializable {
         return LosedPlayersID;
     }
 
-    public void DecreaseCurrentPlayerIndex() {
+    public void decreaseCurrentPlayerIndex() {
         CurrentPlayerIndex--;
     }
 
@@ -352,7 +301,6 @@ public class CellsManager implements Serializable {
         String Result = " ";
 
         try {
-            //StringBuilder ResultMassege = new StringBuilder();
 
             Result += "       Game Finished \n ";
 
@@ -461,7 +409,6 @@ public class CellsManager implements Serializable {
         } else if (TypeOfPlayersWhoCannotHaveShield == 2) {
             PlayersWhoCannotHaveShield[0] = ' ';
             PlayersWhoCannotHaveShield[1] = 'H';
-
         }
     }
 
@@ -510,27 +457,20 @@ public class CellsManager implements Serializable {
         for (Player pa : P) {
             SavePlayer.add(pa);
         }
-
     }
 
     public void setCellsmanager(ArrayList<BCell> Board, ArrayList<Player> Players, ArrayList<Player> LosedPlayer, ArrayList<Integer> IdPlayer, ArrayList<BCell> press, ArrayList<Character> PointType, ArrayList<BCell> SaveBoard, Player CurrentPlayer, int numberAut, int numberHum, int BoardH, int BoardW, int FieldH, int FieldW, int ShieldScore, int PlayerWhoCannotHaveAshield,
             int EmptyCellPresses, int NumericCellPresses, int WrongMineExpectState, int MineicCellPresses, int CorrectMineExpectState, int AutomaticCellOpened, int TheShieldAndThePunishmentOfTheMine, Timer t, int StateSH, int StateSA, int NumberofFirstShield) {
-
         CellsManager.TypeOfPlayersWhoCannotHaveShield = PlayerWhoCannotHaveAshield;
         LargSizeArrayGenerator.FIELDWIDTH = FieldW;
-
         LargSizeArrayGenerator.FIELDHIEGHT = FieldH;
         CellsManager.AUTOMATICPLAYERS = numberAut;
         CellsManager.HUMANPLAYERS = numberHum;
-
         GUIio.timer.setTimeLimit(t.getTimeLimit());
-        //GUIio.LatTime=5000;
         Player.setNumberofshieldtoplayer(NumberofFirstShield);
-
         HumanPlayer.setstateofShield(StateSH);
         AutomaticPlayer.setstateofShield(StateSA);
         IO.CM = new CellsManager();
-
         CellsManager CM = new CellsManager();
         if (Players.size() == 2) {
             IO.CM.P = new ArrayList<>();
@@ -565,7 +505,6 @@ public class CellsManager implements Serializable {
         Player.setAutomaticCellOpened(AutomaticCellOpened);
         Player.setTheShieldAndThePunishmentOfTheMine(TheShieldAndThePunishmentOfTheMine);
         this.IsEnd = false;
-        // GUIio.setNewCM(true);
 
     }
 
@@ -595,14 +534,11 @@ public class CellsManager implements Serializable {
 
         }
         GameDisplayer.TimerLimit = t.getTimeLimit();
-
         LargSizeArrayGenerator.FIELDWIDTH = FieldW;
-
         LargSizeArrayGenerator.FIELDHIEGHT = FieldH;
         CellsManager.AUTOMATICPLAYERS = numberAut;
         CellsManager.HUMANPLAYERS = numberHum;
         Player.setNumberofshieldtoplayer(NumberofFirstShield);
-
         HumanPlayer.setstateofShield(StateSH);
         AutomaticPlayer.setstateofShield(StateSA);
         CellsManager CM = new CellsManager();

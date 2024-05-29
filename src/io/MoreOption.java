@@ -84,13 +84,13 @@ public class MoreOption extends UserInterfaceIO implements ActionListener {
         for (int i = 0; i < ButtonsNumber; i++) {
             
             if (Temp.intersects(IncreaseButtons[i])) {
-                if (-1 < i && i == 0) {///عدد الدروع يلي بدي وزعها عاللاعبين
+                if (-1 < i && i == 0) {
 
                     if (Values[i] < 2) {
                         Values[i]++;
                     }
                 }
-                if (i == 1) {//عدد دروع الرقعه
+                if (i == 1) {
                     if (Values[i] < 15) {
                         Values[i]++;
                         
@@ -124,7 +124,7 @@ public class MoreOption extends UserInterfaceIO implements ActionListener {
             }
             if (Temp.intersects(DecreaseButtons[i])) {
                 
-                if (i == 0 || i == 1 || i == 2) {///عدد الدروع يلي بدي وزعها عاللاعبين
+                if (i == 0 || i == 1 || i == 2) {
                     if (Values[i] > 0) {
                         Values[i]--;
                     }
@@ -206,7 +206,6 @@ public class MoreOption extends UserInterfaceIO implements ActionListener {
     private void InitializeDereaseRect2() {
         DecreaseButtons[0] = new Rectangle(470, 70, 20, 20);
         DecreaseButtons[1] = new Rectangle(470, 115, 20, 20);
-        // DecreaseButtons[2] = new Rectangle(470, 170, 20, 20);
         DecreaseButtons[2] = new Rectangle(470, 260, 20, 20);
         DecreaseButtons[3] = new Rectangle(470, 370, 20, 20);
         DecreaseButtons[4] = new Rectangle(470, 415, 20, 20);
