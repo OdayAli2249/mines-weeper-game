@@ -22,9 +22,9 @@ Minesweeper is a single-player puzzle game. The game is played on a grid of cell
 
 ## Screenshots
 <div style='display:flex;'>
-<img src="images/image1.png" alt="Smaller" width="300"/>
-<img src="images/image2.png" alt="Smaller" width="300"/>
-<img src="images/image3.png" alt="Smaller" width="300"/>
-<img src="images/image4.png" alt="Smaller" width="300"/>
-<img src="images/image5.png" alt="Smaller" width="300"/>
+<img src="images/image1.jpg" alt="Smaller" width="300"/>
+<img src="images/image2.jpg" alt="Smaller" width="300"/>
+<img src="images/image3.jpg" alt="Smaller" width="300"/>
+<img src="images/image4.jpg" alt="Smaller" width="300"/>
+<img src="images/image5.jpg" alt="Smaller" width="300"/>
 </div>
